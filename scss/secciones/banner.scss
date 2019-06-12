@@ -1,0 +1,25 @@
+@mixin banner-img-text{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@mixin banner-slider{
+  position: relative;
+  width: 100%;
+  max-width: $ancho-maximo;
+  height: calc(100vw / 1.333);
+  margin: auto;
+  border: 2px solid red;
+}
+
+.Banner{
+  @include banner-img-text();
+  // border: 2px solid blue;
+  text-align: center;
+}
+
+.Banner-slider{
+  @include banner-slider;
+}

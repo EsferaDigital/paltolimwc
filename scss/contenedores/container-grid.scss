@@ -1,0 +1,20 @@
+// Mixins
+
+@mixin container-grid($columns, $rows, $gap){
+  display: grid;
+  grid-gap: $gap;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+.Container-grid-4{
+  @include container-grid(var(--columns-container-grid4), auto, var(--gap-container-grid));
+}
+
+.Container-grid-3{
+  @include container-grid(var(--columns-container-grid3), auto, var(--gap-container-grid));
+}
+.Container-grid-2{
+  @include container-grid(var(--columns-container-grid2), auto, var(--gap-container-grid));
+}
+

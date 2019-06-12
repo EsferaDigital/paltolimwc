@@ -1,0 +1,13 @@
+@charset "UTF-8";/*!
+  Theme Name: Paltolim
+  Theme URI: https://github.com/EsferaDigital/starter_theme
+  Author: Gabriel Zavando
+  Author URI: https://esferadigital.cl/
+  Description: Tema para la tienda virtual de Paltolim
+  Version: 1.0.0
+  License: GNU General Public Licence v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: Woocommerce, responsive, una columna, sidebar, e-commerce
+  Text Domain: paltolim
+*/html{-webkit-box-sizing:border-box;box-sizing:border-box}body{margin:0}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0}a{text-decoration:none}a:active,a:hover{outline-width:0}li{margin-left:0;list-style-type:inherit;list-style-position:inside;list-style:none}abbr,dfn,em,i{font-style:italic}b,strong{font-weight:700}code,kbd,pre,samp{font-family:monospace;font-size:1em}mark{background-color:#ff0}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}article,aside,details,figcaption,figure,footer,header,img,main,menu,nav,section,summary{display:block}table{border-collapse:collapse}audio,canvas,iframe,picture,progress,svg,video{display:inline-block;vertical-align:baseline;width:100%;max-width:100%;height:auto}button,input,optgroup,option,select,textarea{padding:.25rem;font-family:inherit;font-size:1rem;border:thin solid #000}button,input[type=button],input[type=checkbox],input[type=radio],input[type=reset],input[type=submit],label,select{cursor:pointer}[disabled]{cursor:default;color:#999;background-color:#ddd}textarea{resize:none}::-moz-selection{color:#fff;background-color:#ccc}::selection{color:#fff;background-color:#ccc}[class^=icon-]::before{position:relative;top:2px;margin-right:.5em}h1{font-size:2rem}h2{font-size:1.75rem}h3{font-size:1.5rem}h4{font-size:1.25rem}a,abbr,b,code,dfn,em,h5,i,li,mark,p,pre,strong{font-size:1rem}h6,small{font-size:.75rem}html{font-family:"Open Sans",sans-serif;font-size:1em}body{font-family:"Open Sans",sans-serif}:root{--main-maximo:95%;--columns-aside:1fr;--columns-container-central:1fr;--columns-container-grid2:1fr;--columns-container-grid3:1fr;--columns-container-grid4:1fr;--columns-header-container:1fr;--columns-main-container:1fr;--columns-footer-container:1fr;--gap-aside:.5rem;--gap-container-grid:.5rem;--columns-box-icon:1fr;--font-size-titulo:1.7rem;--font-size-subtitulo:1.4rem;--font-size-parrafos:.9rem;--font-size-small-text:.9rem;--font-size-link-text:1rem;--size-icon:1.7rem;--ancho-logo:40%}@media screen and (min-width:600px){:root{--font-size-parrafos:1rem}}@media screen and (min-width:1024px){:root{--gap-container-grid:1rem;--ancho-logo:11%}}
+/*# sourceMappingURL=style.css.map */
