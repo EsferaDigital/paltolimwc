@@ -30,7 +30,7 @@ if(!function_exists('paltolim_custom_header')):
       'default-image' => get_template_directory_uri() . '/img/header-img.jpg',
       'default-text-color' => '000',
       'width' => 1200,
-      'height' => 720,
+      'height' => 224,
       'flex-width' => true,
       'flex-height' => true,
       'video' => true

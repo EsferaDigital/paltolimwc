@@ -9,3 +9,4 @@
     </a>
     <?php endif; ?>
 </div>
+<h1 class="Title-home-header">Paltolim</h1>

@@ -9,5 +9,5 @@ if(has_nav_menu('menu_social')):
     'link_after' => '</span>'
   ));
 else:
-  echo '<p><small>Aquí puedes agregar un menú de redes sociales, créalo desde tu wp-admin.</small><7p>';
+  echo '<p><small>Aquí puedes agregar un menú de redes sociales, créalo desde tu wp-admin.</small></p>';
 endif;

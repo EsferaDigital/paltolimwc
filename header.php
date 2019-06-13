@@ -15,6 +15,11 @@
         get_template_part('parts-template/header-logo');
         get_template_part('parts-template/header-menu');
       ?>
+      <div class="Text-home-header">
+        <h2>Transporte de palta hass del campo a la ciudad.</h2>
+        <p>Sin intermediarios</p>
+        <small>Uniendo a los grandes productores con las pymes chilenas</small>
+      </div>
     </section>
   </header>
   <div class="Container-central">

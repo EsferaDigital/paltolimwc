@@ -3,10 +3,24 @@
 $ancho-maximo: 1400px; //de todo el sitio
 $espacio-entre-letras: 1px;
 $altura-header: 5rem; //revisar
+$margen-secciones: 2rem;
+
+// Sombras
+
+$shadow-flat: 7px 7px 12px rgba(0, 0, 0, 0.575);
+$shadow-blur: 10px 10px 10px rgba(0, 0, 0, 0.575);
+
+// Degradados
+
+$degradado-menu: linear-gradient(10deg, rgb(51, 119, 82), rgb(33, 64, 48));
+
+$degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E, #174E51);
 
 :root{
   // ancho maximo de lo visible para desktop
   --main-maximo: 95%;
+  // margenes
+  --margen-header: 7rem;
   // Columnas container
   --columns-aside: 1fr;
   --columns-container-central: 1fr;
@@ -29,12 +43,18 @@ $altura-header: 5rem; //revisar
   --font-size-link-text: 1rem;
   --size-icon: 1.7rem;
   // Ancho del logo
-  --ancho-logo: 40%;
+  --ancho-logo: 50%;
+  --linea-header: 0;
   @include mq(md){
     --font-size-parrafos: 1rem;
   }
+  @include mq(mdl){
+    --main-maximo: 80%;
+    --linea-header: 1px;
+    --columns-container-central: 1fr minmax(min-content, max-content);
+  }
   @include mq(lgs){
     --gap-container-grid: 1rem;
-    --ancho-logo: 11%;
+    --ancho-logo: 13%;
   }
 }

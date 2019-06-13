@@ -14,16 +14,15 @@
   height: $altura-header;
   line-height: $altura-header;
   z-index: capa(capa1);
-  // border: 1px solid red;
   @include mq(mdl){
     position: static;
-    width: 50%;
+    width: var(--ancho-logo);
   }
   & a{
     display: grid;
-    width: var(--ancho-logo);
     height: $altura-header;
     align-content: center;
+    padding: .5rem;
   }
   & img{
     width: 100%;
