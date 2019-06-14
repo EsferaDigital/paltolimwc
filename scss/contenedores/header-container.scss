@@ -1,34 +1,34 @@
 // Refactorizar
 
-.Header-container{
-  position: relative;
-  margin: 0 auto;
-  width: var(--main-maximo);
-  @include mq(lgs){
-    display: flex;
-  }
-}
+// .Header-container{
+//   position: relative;
+//   margin: 0 auto;
+//   width: var(--main-maximo);
+//   @include mq(lgs){
+//     display: flex;
+//   }
+// }
 
-.Logo{
-  position: absolute;
-  height: $altura-header;
-  line-height: $altura-header;
-  z-index: capa(capa1);
-  @include mq(mdl){
-    position: static;
-    width: var(--ancho-logo);
-  }
-  & a{
-    display: grid;
-    height: $altura-header;
-    align-content: center;
-    padding: .5rem;
-  }
-  & img{
-    width: 100%;
-    height: auto;
-  }
-}
+// .Logo{
+//   position: absolute;
+//   height: $altura-header;
+//   line-height: $altura-header;
+//   z-index: capa(capa1);
+//   @include mq(mdl){
+//     position: static;
+//     width: var(--ancho-logo);
+//   }
+//   & a{
+//     display: grid;
+//     height: $altura-header;
+//     align-content: center;
+//     padding: .5rem;
+//   }
+//   & img{
+//     width: 100%;
+//     height: auto;
+//   }
+// }
 
 .hamburger{
   &:hover{
@@ -41,7 +41,7 @@
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
-  background-color: black;
+  background-color: white;
 }
 
 .hamburger.is-active .hamburger-inner,
@@ -129,13 +129,12 @@
     @include mq(lgs){
       padding: 0 .5rem;
       font-size: 1rem;
-      color: black;
     }
     @include mq(lgm){
       font-size: 1.3rem;
     }
     &:hover{
-      background-color: color(secondary);
+      color: color(secondary);
     }
   }
 }

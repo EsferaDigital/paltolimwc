@@ -9,17 +9,44 @@
 </head>
 <body <?php body_class('hola'); ?>>
   <?php get_template_part('parts-template/header-custom'); ?>
-  <header class="Header">
+  <header id="Header" class="Header">
     <section class="Header-container">
       <?php
         get_template_part('parts-template/header-logo');
         get_template_part('parts-template/header-menu');
       ?>
-      <div class="Text-home-header">
-        <h2>Transporte de palta hass del campo a la ciudad.</h2>
-        <p>Sin intermediarios</p>
-        <small>Uniendo a los grandes productores con las pymes chilenas</small>
-      </div>
     </section>
+    <?php
+      if(is_home() || is_front_page()):?>
+        <div class="Text-home-header">
+          <h2>Transporte de palta hass del campo a la ciudad.</h2>
+          <h3>Sin intermediarios</h3>
+          <small>Uniendo a los grandes productores con las pymes chilenas</small>
+        </div>
+      <?php else:
+        echo '';
+      endif;
+    ?>
   </header>
+    <?php
+    if(is_home() || is_front_page()):?>
+    <section class="Under-header">
+      <?php
+      if(is_active_sidebar('sidebar_under-header')):
+        dynamic_sidebar('sidebar_under-header');
+      else:
+        echo '<p><small>Aquí puedes agregar un widget personalizado, hazlo desde tu wp-admin.</small></p>';
+      endif;?>
+    </section>
+    <?php
+    else:?>
+    <section class="Under-header Under-header-active">
+      <?php
+      if(is_active_sidebar('sidebar_under-header')):
+        dynamic_sidebar('sidebar_under-header');
+      else:
+        echo '<p><small>Aquí puedes agregar un widget personalizado, hazlo desde tu wp-admin.</small></p>';
+      endif;?>
+    </section>
+    <?php endif; ?>
   <div class="Container-central">

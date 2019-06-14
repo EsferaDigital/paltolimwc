@@ -1,3 +1,6 @@
-import toggleNav from './globales/toggle_nav';
+import toggleNav from './dev/toggle_nav';
+import {headerAnimado, OnLoad} from './dev/changes';
 
 toggleNav()
+headerAnimado()
+OnLoad()

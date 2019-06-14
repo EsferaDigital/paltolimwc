@@ -57,19 +57,19 @@ gulp.task('css', () => {
 })
 
 //Toma el archivo index.js y los pasa a al que definamo (cualquiera.js) legible para los navegadores. Se debe correr sólo cuando hayamos trabajado en el js correspondiente.
-// gulp.task('js', () => {
-//   browserify('./js/index.js')
-//     .transform(babelify)
-//     .bundle()
-//     .on('error', err => console.log(err.message))
-//     .pipe(source('./js/inicio.js'))
-//     .pipe(buffer())
-//     .pipe(sourcemaps.init({loadMaps: true}))
-//     .pipe(sourcemaps.write('./'))
-//     .pipe(jsmin())
-//     .pipe(gulp.dest('./'))
-//     .pipe(reload({stream: true}))
-// });
+gulp.task('js', () => {
+  browserify('./js/index.js')
+    .transform(babelify)
+    .bundle()
+    .on('error', err => console.log(err.message))
+    .pipe(source('./js/script.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.write('./'))
+    .pipe(jsmin())
+    .pipe(gulp.dest('./'))
+    .pipe(reload({stream: true}))
+});
 
 
 
@@ -90,5 +90,5 @@ gulp.task('img', () => {
 
  gulp.task('default', ['server', 'css'], () => {
   gulp.watch('./scss/**/*.+(scss|css)', ['css']).on('change', server.reload)
-  gulp.watch('./js/**/*.js', ['js']).on('change', server.reload)
+  gulp.watch('./js/index.js', ['js']).on('change', server.reload)
 });

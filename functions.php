@@ -15,7 +15,7 @@ global $google_fonts;
 global $font_awesome;
 global $hamburgers;
 
-$google_fonts = 'https://fonts.googleapis.com/css?family=Didact+Gothic';
+$google_fonts = 'https://fonts.googleapis.com/css?family=Raleway|Work+Sans';
 $font_awesome = 'https://use.fontawesome.com/releases/v5.7.2/css/all.css';
 $hamburgers = 'https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css';
 
@@ -67,9 +67,19 @@ if(!function_exists('paltolim_register_sidebars')):
     ));
 
     register_sidebar(array(
+      'name' => __('Bajo la Cabecera'),
+      'id' => 'sidebar_under-header',
+      'description' => __('Este es el sidebar que va debajo del encabezado principal', 'paltolim'),
+      'before_widget' => '<article id="%1$s" class="Widget %2$s">',
+      'after_widget' => '</article>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
+
+    register_sidebar(array(
       'name' => __('Sidebar del Pié de Página', 'paltolim'),
       'id' => 'sidebar_footer',
-      'description' => __('Estes es el sidebar del pié de página del sitio.', 'paltolim'),
+      'description' => __('Este es el sidebar del pié de página del sitio.', 'paltolim'),
       'before_widget' => '<article id="%1$s" class="Widget %2$s">',
       'after_widget' => '</article>',
       'before_title' => '<h3>',
@@ -120,6 +130,10 @@ if(!function_exists('paltolim_setup')):
   }
 endif;
 add_action('after_setup_theme', 'paltolim_setup');
+
+//Hooks woocommerce
+
+// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 
 // Soportes adicionales
 require_once get_template_directory() . '/inc/custom-header.php';
