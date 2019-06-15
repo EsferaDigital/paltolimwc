@@ -49,9 +49,9 @@ ul.products.columns-3{
   &::before{
     display: none;
   }
-  & > li.product.type-product.product-type-simple{
+  & > li.product.type-product{
     margin: 0 !important;
-    width: 100%;
+    width: 100% !important;
     box-shadow: $sombra-plana;
     background-color: color(bg);
     transition: transform .2s;
