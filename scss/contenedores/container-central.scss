@@ -20,4 +20,5 @@
   max-width: $ancho-maximo;
   margin: auto;
   margin-top: var(--margen-header);
+  grid-gap: var(--gap-container-central);
 }
