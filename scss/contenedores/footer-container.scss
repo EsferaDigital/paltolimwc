@@ -3,3 +3,11 @@
   margin: auto;
   max-width: $ancho-maximo;
 }
+
+.Footer-columns{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  &-item{
+    border: 1px solid red;
+  }
+}

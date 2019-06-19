@@ -77,9 +77,29 @@ if(!function_exists('paltolim_register_sidebars')):
     ));
 
     register_sidebar(array(
-      'name' => __('Sidebar del Pié de Página', 'paltolim'),
-      'id' => 'sidebar_footer',
-      'description' => __('Este es el sidebar del pié de página del sitio.', 'paltolim'),
+      'name' => __('Footer Columna I', 'paltolim'),
+      'id' => 'footer_uno',
+      'description' => __('Columna uno del footer.', 'paltolim'),
+      'before_widget' => '<article id="%1$s" class="Widget %2$s">',
+      'after_widget' => '</article>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
+
+    register_sidebar(array(
+      'name' => __('Footer Columna II', 'paltolim'),
+      'id' => 'footer_dos',
+      'description' => __('Columna dos del footer.', 'paltolim'),
+      'before_widget' => '<article id="%1$s" class="Widget %2$s">',
+      'after_widget' => '</article>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
+
+    register_sidebar(array(
+      'name' => __('Footer Columna III', 'paltolim'),
+      'id' => 'footer_tres',
+      'description' => __('Columna tres del footer.', 'paltolim'),
       'before_widget' => '<article id="%1$s" class="Widget %2$s">',
       'after_widget' => '</article>',
       'before_title' => '<h3>',
