@@ -1,4 +1,4 @@
-<div class="Footer-columns-item">
+<div class="Footer-widgets-item">
   <?php
   if(is_active_sidebar('footer_uno')):
     dynamic_sidebar('footer_uno');
@@ -10,7 +10,7 @@
   </article>
   <?php endif; ?>
 </div>
-<div class="Footer-columns-item">
+<div class="Footer-widgets-item">
   <?php
   if(is_active_sidebar('footer_dos')):
     dynamic_sidebar('footer_dos');
@@ -22,7 +22,7 @@
   </article>
   <?php endif; ?>
 </div>
-<div class="Footer-columns-item">
+<div class="Footer-widgets-item">
   <?php
   if(is_active_sidebar('footer_tres')):
     dynamic_sidebar('footer_tres');

@@ -2,5 +2,14 @@
   width: 100%;
   max-width: $ancho-maximo;
   margin: auto;
-  background-image: img("fondo-footer.jpg");
+  background: $fondo-footer;
+}
+
+#ButtonTop{
+  position: fixed;
+  bottom: 180px;
+  right: 40px;
+  z-index: capa(capa10);
+  border: 2px solid red;
+  display: none;
 }

@@ -9,26 +9,24 @@
 //   }
 // }
 
-// .Logo{
-//   position: absolute;
-//   height: $altura-header;
-//   line-height: $altura-header;
-//   z-index: capa(capa1);
-//   @include mq(mdl){
-//     position: static;
-//     width: var(--ancho-logo);
-//   }
-//   & a{
-//     display: grid;
-//     height: $altura-header;
-//     align-content: center;
-//     padding: .5rem;
-//   }
-//   & img{
-//     width: 100%;
-//     height: auto;
-//   }
-// }
+.Logo{
+  // border: 1px solid blue;
+  height: $altura-header;
+  line-height: $altura-header;
+  @include mq(mdl){
+    width: 50%;
+  }
+  & a{
+    display: grid;
+    width: auto;
+    height: $altura-header;
+    align-content: center;
+    & img.custom-logo{
+      width: auto;
+      height: $altura-header;
+    }
+  }
+}
 
 .hamburger{
   &:hover{
@@ -98,7 +96,7 @@
   padding-top: $altura-header;
   text-align: center;
   height: 100%;
-  background: color(secondary);
+  background: $degradado-menu;
   @include mq(lgs){
     width: 100%;
     padding-top: 0;

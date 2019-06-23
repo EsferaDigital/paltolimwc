@@ -30,8 +30,11 @@
 // Woocommerce
 
 @import "woocommerce/tienda";
-// Boxes (contenido único centrado absoluto)
+@import "woocommerce/carrito";
 
+// Boxes (contenido único)
+
+@import "boxes/box-creditos";
 // // @import "boxes/box-img";
 // // @import "boxes/box-text";
 // // @import "boxes/box-audio";
@@ -40,9 +43,9 @@
 // // @import "boxes/box-slider";
 
 
-// Cards (tarjetas con contenido unico. Van siempre dentro de un container grid)
+// Cards (tarjetas con contenido especifico. Van siempre dentro de un container grid)
 
-// @import "cards/card-img";
+@import "cards/card-copy";
 // @import "cards/card-text";
 
 

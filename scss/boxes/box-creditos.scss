@@ -1,0 +1,10 @@
+.Box-creditos{
+  background-color: color(everglade);
+  display: grid;
+  padding: var(--padding-box-creditos);
+  justify-items: center;
+  align-items: center;
+  font-family: $fuente-secundaria;
+  color: white;
+  font-weight: 400;
+}

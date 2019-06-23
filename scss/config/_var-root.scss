@@ -12,30 +12,70 @@ $shadow-blur: 10px 10px 10px rgba(0, 0, 0, 0.575);
 
 // Degradados
 
-$degradado-menu: linear-gradient(10deg, rgb(51, 119, 82), rgb(33, 64, 48));
+$degradado-menu: linear-gradient(10deg, rgb(73, 175, 119), rgb(33, 64, 48));
+
+$fondo-footer: linear-gradient(10deg, rgb(22, 58, 38), rgb(47, 94, 70));
 
 $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E, #174E51);
 
 :root{
   // ancho maximo de lo visible para desktop
   --main-maximo: 95%;
-  // margenes
-  --margen-header: 2rem;
-  // Columnas container
-  --columns-aside: 1fr;
+  @include mq(mdl){
+    --main-maximo: 80%;
+  }
+}
+
+:root{
+  //columnas y filas
+  --columns-header-container: 1fr;
+  --columns-main-container: 1fr;
   --columns-container-central: 1fr;
+  --columns-aside: 1fr;
+  --columns-footer-container: 1fr;
   --columns-container-grid2: 1fr;
   --columns-container-grid3: 1fr;
   --columns-container-grid4: 1fr;
-  --columns-header-container: 1fr;
-  --columns-main-container: 1fr;
-  --columns-footer-container: 1fr;
+  --columns-box-icon: 1fr;
+  --columns-footer-widgets: 1fr;
+  //card-copy
+  --columns-card-copy: 1fr;
+  --rows-card-copy: 1fr 1fr;
+  @include mq(md){
+    --columns-card-copy: 1fr 1fr;
+    --rows-card-copy: none;
+    --columns-footer-widgets: repeat(3, 1fr);
+  }
+  @include mq(mdl){
+    --columns-container-central: 1fr minmax(min-content, max-content);
+  }
+}
+
+:root{
   // gap de los container
   --gap-aside: .5rem;
   --gap-container-grid: .5rem;
   --gap-container-central: 1rem;
-  // Columnas box
-  --columns-box-icon: 1fr;
+  --gap-card-copy: .25rem;
+  @include mq(lgs){
+    --gap-container-grid: 1rem;
+  }
+}
+
+:root{
+  //margenes y lineas (before o after)
+  --margen-header: 2rem;
+  --linea-header: 0;
+  --lineas-footer-widgets: 0;
+  @include mq(mdl){
+    --linea-header: 1px;
+  }
+  @include mq(lgs){
+    --lineas-footer-widgets: 1px;
+  }
+}
+
+:root{
   // tamaño de fuentes
   --font-size-titulo: 1.7rem;
   --font-size-subtitulo: 1.4rem;
@@ -43,29 +83,31 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   --font-size-small-text: .9rem;
   --font-size-link-text: 1rem;
   --size-icon: 1.7rem;
-  // Ancho del logo
-  --ancho-logo: 25%;
-  --linea-header: 0;
-  @include mq(smH){
-    --ancho-logo: 13%;
-  }
-  @include mq(smm){
-    --ancho-logo: 22%;
-  }
+  --font-size-widgets-footer-title: 1.2rem;
+  --font-size-widgets-footer-subtitle: 1rem;
+  --font-size-product-span: .9rem;
+  --font-size-carrito-subtitle: .8rem;
+  --font-size-final-compra: .9rem;
   @include mq(md){
     --font-size-parrafos: 1rem;
-    --ancho-logo: 13%;
-  }
-  @include mq(mdl){
-    --main-maximo: 80%;
-    --linea-header: 1px;
-    --columns-container-central: 1fr minmax(min-content, max-content);
+    --font-size-widgets-footer-title: 1.4rem;
+    --font-size-product-span: 1rem;
+    --font-size-widgets-footer-subtitle: 1.1rem;
+    --font-size-carrito-subtitle: .9rem;
   }
   @include mq(lgs){
-    --gap-container-grid: 1rem;
-    --ancho-logo: 10%;
+    --font-size-final-compra: 1rem;
   }
-  @include mq(lgm){
-    --ancho-logo: 8%;
+}
+
+:root{
+  //padding
+  --padding-box-creditos: .25rem 0;
+  --padding-footer-widgets-item: .5rem;
+  @include mq(md){
+    --padding-box-creditos: .5rem 0;
+  }
+  @include mq(lgs){
+    --padding-footer-widgets-item: 1rem;
   }
 }

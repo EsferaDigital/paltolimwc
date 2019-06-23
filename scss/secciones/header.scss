@@ -38,25 +38,6 @@
   }
 }
 
-.Logo{
-  // border: 1px solid blue;
-  height: $altura-header;
-  line-height: $altura-header;
-  @include mq(lgs){
-    width: var(--ancho-logo);
-  }
-  & a{
-    display: grid;
-    height: $altura-header;
-    align-content: center;
-    justify-content: center;
-    padding: .5rem;
-    & img.custom-logo{
-      width: 100%;
-      height: auto;
-    }
-  }
-}
 
 .Title-home-header{
   color: white;
@@ -150,21 +131,26 @@
   width: 100%;
   margin: auto;
   margin-top: 2rem;
-  & .widget_product_search{
-    // border: 1px solid blue;
+  & .woocommerce-product-search{
+    width: 95%;
+    margin: auto;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     & input{
+      width: 65%;
       font-family: $fuente-secundaria;
       line-height: 2.4;
       border-color: color(secondary);
       border-radius: 1.5rem 0 0 1.5rem;
       padding-left: 1.5rem;
       outline: none;
+      background-color: white;
+      color: black;
       border-right-color: transparent;
     }
     & button{
-      // display: block;
+      width: 35%;
       line-height: 3;
       background-color: color(success);
       color: color(satin);
@@ -172,7 +158,6 @@
       border-radius: 0 1.5rem 1.5rem 0;
       border: none;
       outline: none;
-      transform: translate(-6px, 0);
       transition: background-color .5s ease;
       &:hover{
         background-color: darken(color(success),5);
@@ -183,6 +168,7 @@
     }
   }
 }
+
 
 .Under-header-active{
   margin-top: 7rem;
