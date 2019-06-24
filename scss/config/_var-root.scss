@@ -38,6 +38,7 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   --columns-container-grid4: 1fr;
   --columns-box-icon: 1fr;
   --columns-footer-widgets: 1fr;
+  --columns-tienda-products: 1fr;
   //card-copy
   --columns-card-copy: 1fr;
   --rows-card-copy: 1fr 1fr;
@@ -45,9 +46,11 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
     --columns-card-copy: 1fr 1fr;
     --rows-card-copy: none;
     --columns-footer-widgets: repeat(3, 1fr);
+    --columns-tienda-products: 1fr 1fr;
   }
   @include mq(mdl){
     --columns-container-central: 1fr minmax(min-content, max-content);
+    --columns-tienda-products: repeat(3, 1fr);
   }
 }
 
@@ -67,22 +70,26 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   --margen-header: 2rem;
   --linea-header: 0;
   --lineas-footer-widgets: 0;
+  --lineas-titulo-tienda: 0;
   @include mq(mdl){
     --linea-header: 1px;
   }
   @include mq(lgs){
     --lineas-footer-widgets: 1px;
+    --lineas-titulo-tienda: 1px;
   }
 }
 
 :root{
   // tamaño de fuentes
   --font-size-titulo: 1.7rem;
+  --font-size-titulo-tienda: 1.4rem;
   --font-size-subtitulo: 1.4rem;
   --font-size-parrafos: .9rem;
   --font-size-small-text: .9rem;
   --font-size-link-text: 1rem;
   --size-icon: 1.7rem;
+  --font-size-aside-subtitle: 1.3rem;
   --font-size-widgets-footer-title: 1.2rem;
   --font-size-widgets-footer-subtitle: 1rem;
   --font-size-product-span: .9rem;

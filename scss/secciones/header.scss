@@ -29,7 +29,7 @@
 
 .Header-container{
   display: grid;
-  grid-template-columns: var(--ancho-logo) 1fr minmax(min-content, max-content);
+  grid-template-columns: minmax(min-content, max-content) 1fr minmax(min-content, max-content);
   position: relative;
   margin: 0 auto;
   width: var(--main-maximo);
@@ -43,6 +43,7 @@
   color: white;
   letter-spacing: 1px;
   font-weight: 600;
+  // border: 1px solid red;
   @include mq(lgs){
     flex: 1 1 auto;
     margin-left: .5rem;
@@ -191,6 +192,7 @@
       position: relative;
       width: 100%;
       margin: 0;
+      // border: 2px solid red;
       &:before{
         content: "Ver Productos";
         position: absolute;
@@ -206,6 +208,7 @@
         background-color: color(secondary);
         cursor: pointer;
         z-index: 2;
+        // border: 2px solid red;
       }
       &:after{
         content: "";
@@ -225,7 +228,7 @@
         display: block;
         position: absolute;
         text-align: center;
-        width: 17rem;
+        width: 100%;
         // border: 1px solid red;
         left: 0;
         padding-top: 20%;

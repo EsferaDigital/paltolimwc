@@ -1,3 +1,92 @@
 .Widgets{
-  margin-left: 1rem;
+  // border: 2px solid red;
+  width: 100%;
+  min-width: 350px;
+  // background-color: color(amulet);
+  border: 1px solid color(secondary);
+  box-shadow: $shadow-flat;
+  & article.Widget.woocommerce.widget_product_search{
+    width: 95%;
+    margin: auto;
+  }
+  & article.Widget.woocommerce.widget_shopping_cart{
+    width: 95%;
+    margin: auto;
+    & h3{
+      color: color(secondary);
+      text-align: center;
+    }
+  }
+  & article.Widget.woocommerce.widget_price_filter{ //filtro por precio
+    width: 95%;
+    margin: auto;
+    // border: 2px solid blue;
+    & h3{
+      color: color(secondary);
+      text-align: center;
+      padding: .5rem 0;
+      font-size: var(--font-size-aside-subtitle);
+      background-color: color(primary);
+      margin-bottom: 1rem;
+    }
+    & > form{
+      color: color(everglade);
+      & div.ui-slider-range.ui-widget-header.ui-corner-all,
+      span.ui-slider-handle.ui-state-default.ui-corner-all{
+        background-color: color(tobaco);
+      }
+      & & div.ui-slider-range.ui-widget-header.ui-corner-all{
+        widows: 90%;
+        margin: auto;
+      }
+      & .price_slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all{
+        width: 90%;
+        margin: auto;
+      }
+    }
+  }
+  & .Widget.woocommerce.widget_product_categories{ // productos por categoria
+    // border: 2px solid green;
+    width: 95%;
+    margin: 1rem auto;
+    & h3{
+      color: color(secondary);
+      text-align: center;
+      padding: .5rem 0;
+      font-size: var(--font-size-aside-subtitle);
+      background-color: color(primary);
+    }
+    & ul.product-categories{
+      // border: 2px solid blue;
+      width: 95%;
+      margin: auto;
+      padding: 1rem 0;
+      & li.cat-item > a{
+        color: color(everglade);
+        font-weight: bold;
+        &:hover{
+          color: darken(color(everglade),5)
+        }
+      }
+    }
+  }
 }
+
+.price_slider_amount{
+  // border: 2px solid red;
+  width: 95%;
+  margin: 1rem auto;
+  & button.button{
+    border: 1px solid color(success);
+    background-color: color(success);
+    color: white;
+    &:hover{
+      color: white;
+      background-color: darken(color(success),5);
+    }
+  }
+}
+
+// .ui-slider-range.ui-widget-header.ui-corner-all{
+//   background-color: red;
+// }

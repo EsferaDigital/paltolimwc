@@ -1,3 +1,30 @@
+// .content-area{
+//   border: 2px solid red;
+// }
+
+.site-main{
+  border: 1px solid color(secondary);
+  padding: 0 1rem;
+  // background-color: color(fondo);
+  box-shadow: $shadow-flat;
+  & nav.woocommerce-breadcrumb{
+    // border: 2px solid red; //menu migas
+    padding: .5rem 0;
+  }
+  & header.woocommerce-products-header{ //titulo
+    // border: 2px solid yellow;
+  }
+  & form.woocommerce-ordering{ //formulario orden predeterminado
+    // border: 2px solid green;
+  }
+  & ul.products.columns-3{ //caja de lista de productos
+    display: grid;
+    grid-template-columns: var(--columns-tienda-products);
+    // border: 2px solid pink;
+    height: 100%;
+  }
+}
+
 #text-2{
   width: var(--main-maximo);
   margin: auto;
@@ -10,11 +37,11 @@
   color: color(secondary);
   text-align: center;
   position: relative;
-  font-size: 2rem;
+  font-size: var(--font-size-titulo-tienda);
   &:before{
     content: "";
     width: 30%;
-    height: 1px;
+    height: var(--lineas-titulo-tienda);
     position: absolute;
     top: 50%;
     left: 0;
@@ -23,7 +50,7 @@
   &:after{
     content: "";
     width: 30%;
-    height: 1px;
+    height: var(--lineas-titulo-tienda);
     position: absolute;
     top: 50%;
     right: 0;
