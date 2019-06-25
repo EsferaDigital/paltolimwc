@@ -129,6 +129,7 @@ span.woocommerce-Price-currencySymbol.amount.mcmp-recalc-price-suffix{
       color: black;
       border-right-color: transparent;
       font-size: .8rem;
+      border-radius: 10px 0 0 10px;
     }
     & button{
       width: 35%;
@@ -140,6 +141,7 @@ span.woocommerce-Price-currencySymbol.amount.mcmp-recalc-price-suffix{
       border: none;
       outline: none;
       transition: background-color .5s ease;
+      border-radius: 0 10px 10px 0;
       &:hover{
         background-color: darken(color(success),5);
       }

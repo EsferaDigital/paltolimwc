@@ -1,12 +1,13 @@
-// .content-area{
-//   border: 2px solid red;
-// }
+.content-area{
+  border: 1px solid color(secondary);
+  width: 100%;
+  box-shadow: $shadow-flat;
+  border-radius: 10px;
+}
 
 .site-main{
-  border: 1px solid color(secondary);
   padding: 0 1rem;
   // background-color: color(fondo);
-  box-shadow: $shadow-flat;
   & nav.woocommerce-breadcrumb{
     // border: 2px solid red; //menu migas
     padding: .5rem 0;
@@ -14,8 +15,24 @@
   & header.woocommerce-products-header{ //titulo
     // border: 2px solid yellow;
   }
+  & p.woocommerce-result-count{
+    color: color(shark);
+    margin: .5rem auto;
+  }
   & form.woocommerce-ordering{ //formulario orden predeterminado
     // border: 2px solid green;
+    width: 100%;
+    @include mq(md){
+      position: relative;
+      width: 70%;
+      right: 0;
+      @include mq(lgs){
+        width: 40%;
+      }
+    }
+    & .orderby{
+      width: 100%;
+    }
   }
   & ul.products.columns-3{ //caja de lista de productos
     display: grid;
@@ -60,6 +77,14 @@
 
 .mostrar{
   display: block !important;
+  margin-top: -1rem;
+  @include mq(md){
+    margin-top: 1rem;
+  }
+  @include mq(lgs){
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .ocultar{
@@ -79,17 +104,41 @@ ul.products.columns-3{
   & > li.product.type-product{
     margin: 0 !important;
     width: 100% !important;
-    box-shadow: $sombra-plana;
+    // box-shadow: $sombra-plana;
     background-color: color(bg);
     transition: transform .2s;
     position: relative;
-    border-radius: 5px;
+    border-radius: 10px;
+    // border: 1px solid color(everglade);
+    // padding: .5rem 0 0;
+    overflow: hidden;
     &:hover{
-      transform: scale(1.03);
+      // transform: scale(1.03);
       z-index: capa(capa5);
     }
     & img{
-      border-radius: 5px 5px 0 0;
+      display: block;
+    }
+    & > a > span.price{
+      text-align: center;
+      & > span{
+        color: color(shark);
+      }
+    }
+    & > a.button.product_type_variable.add_to_cart_button{
+      border: none;
+      display: block;
+      text-align: center;
+      width: 90%;
+      max-width: 250px;
+      font-size: .9rem;
+      margin: 1rem auto 1.5rem;
+      padding: .8rem 0;
+      color: white;
+      background-color: color(success);
+      &:hover{
+        background-color: darken(color(success), 5)
+      }
     }
   }
 }
@@ -99,13 +148,13 @@ ul.products.columns-3{
   color: color(everglade);
 }
 
-//Precios en tienda
-span.price{
-  text-align: center;
-}
-.woocommerce-Price-amount.amount{
-  color: black;
-}
+// //Precios en tienda
+// span.price{
+//   text-align: center;
+// }
+// .woocommerce-Price-amount.amount{
+//   color: black;
+// }
 
 #text{
   text-decoration-line: none;

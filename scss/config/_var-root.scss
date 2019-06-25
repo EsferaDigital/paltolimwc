@@ -21,8 +21,11 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
 :root{
   // ancho maximo de lo visible para desktop
   --main-maximo: 95%;
+  //ancho minimo del sidebar
+  --widgets-width: 95%;
   @include mq(mdl){
     --main-maximo: 80%;
+    // --widgets-width: 350px;
   }
 }
 
@@ -49,7 +52,11 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
     --columns-tienda-products: 1fr 1fr;
   }
   @include mq(mdl){
-    --columns-container-central: 1fr minmax(min-content, max-content);
+    --columns-container-central: 1fr 40%;
+    --columns-tienda-products: repeat(2, 1fr);
+  }
+  @include mq(lgs){
+    --columns-container-central: 1fr 35%;
     --columns-tienda-products: repeat(3, 1fr);
   }
 }
@@ -67,7 +74,7 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
 
 :root{
   //margenes y lineas (before o after)
-  --margen-header: 2rem;
+  --margen-header: 1rem;
   --linea-header: 0;
   --lineas-footer-widgets: 0;
   --lineas-titulo-tienda: 0;
@@ -108,6 +115,7 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   }
   @include mq(lgs){
     --font-size-final-compra: 1rem;
+    --font-size-titulo-tienda: 1.7rem;
   }
 }
 

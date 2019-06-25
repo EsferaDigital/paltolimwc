@@ -1,10 +1,10 @@
 .Widgets{
-  // border: 2px solid red;
   width: 100%;
-  min-width: 350px;
+  min-width: var(--widgets-width);
   // background-color: color(amulet);
   border: 1px solid color(secondary);
   box-shadow: $shadow-flat;
+  border-radius: 10px;
   & article.Widget.woocommerce.widget_product_search{
     width: 95%;
     margin: auto;
@@ -20,7 +20,10 @@
   & article.Widget.woocommerce.widget_price_filter{ //filtro por precio
     width: 95%;
     margin: auto;
-    // border: 2px solid blue;
+    border: 1px solid color(primary);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
     & h3{
       color: color(secondary);
       text-align: center;
@@ -49,6 +52,9 @@
     // border: 2px solid green;
     width: 95%;
     margin: 1rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid color(primary);
     & h3{
       color: color(secondary);
       text-align: center;
