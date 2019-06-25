@@ -22,22 +22,28 @@
   }
   &-item:nth-child(2){
     position: relative;
+    --altura-linea: 80%;
+    --top-linea: 15%;
+    @include mq(lgs){
+      --altura-linea: 70%;
+      --top-linea: 25%;
+    }
     &:after{
       position: absolute;
       content: "";
       width: var(--lineas-footer-widgets);
-      height: 80%;
+      height: var(--altura-linea);
       background-color: color(secondary);
-      top: 10%;
+      top: var(--top-linea);
       left: 0;
     }
     &:before{
       position: absolute;
       content: "";
       width: var(--lineas-footer-widgets);
-      height: 80%;
+      height: var(--altura-linea);
       background-color: color(secondary);
-      top: 10%;
+      top: var(--top-linea);
       right: 0;
     }
   }

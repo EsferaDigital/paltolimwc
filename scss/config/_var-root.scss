@@ -73,9 +73,9 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   --lineas-titulo-tienda: 0;
   @include mq(mdl){
     --linea-header: 1px;
+    --lineas-footer-widgets: 1px;
   }
   @include mq(lgs){
-    --lineas-footer-widgets: 1px;
     --lineas-titulo-tienda: 1px;
   }
 }
@@ -95,6 +95,10 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   --font-size-product-span: .9rem;
   --font-size-carrito-subtitle: .8rem;
   --font-size-final-compra: .9rem;
+  @include mq(smm){
+    --font-size-widgets-footer-title: 1.3rem;
+    --font-size-product-span: 1.1rem;
+  }
   @include mq(md){
     --font-size-parrafos: 1rem;
     --font-size-widgets-footer-title: 1.4rem;
