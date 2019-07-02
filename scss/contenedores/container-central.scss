@@ -13,11 +13,20 @@
 
 
 .Container-central{
-  // border: 2px solid blue;
+  border: 2px solid blue;
   display: grid;
   grid-template-columns: var(--columns-container-central);
   width: var(--main-maximo);
   max-width: $ancho-maximo;
+  min-height: 20rem;
   margin: var(--margen-header) auto 4rem;
-  grid-gap: var(--gap-container-central);
+  grid-gap: 1rem;
+}
+
+body.product-template-default.single > .Container-central{
+  grid-gap: 0;
+}
+
+body.home > .Container-central{
+  grid-gap: 0;
 }

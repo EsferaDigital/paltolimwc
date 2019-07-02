@@ -80,3 +80,20 @@
   margin: .8rem auto auto;
   padding: .5rem 0 !important;
 }
+
+//Pagina del carrito
+
+.woocommerce{
+  & p.cart-empty{
+    color: color(shark);
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  & p.return-to-shop{
+    text-align: center;
+    & > a.button.wc-backward{
+      @include btn-wc;
+      margin-top: 1rem;
+    }
+  }
+}

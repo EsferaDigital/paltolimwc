@@ -24,8 +24,11 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   //ancho minimo del sidebar
   --widgets-width: 95%;
   @include mq(mdl){
-    --main-maximo: 80%;
-    // --widgets-width: 350px;
+    --main-maximo: 90%;
+    --widgets-width: 40%;
+  }
+  @include mq(lgs){
+    --widgets-width: 350px;
   }
 }
 
@@ -42,6 +45,7 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   --columns-box-icon: 1fr;
   --columns-footer-widgets: 1fr;
   --columns-tienda-products: 1fr;
+  --columns-related-products: 1fr;
   //card-copy
   --columns-card-copy: 1fr;
   --rows-card-copy: 1fr 1fr;
@@ -52,11 +56,10 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
     --columns-tienda-products: 1fr 1fr;
   }
   @include mq(mdl){
-    --columns-container-central: 1fr 40%;
+    --columns-container-central: 1fr minmax(min-content, max-content);
     --columns-tienda-products: repeat(2, 1fr);
   }
   @include mq(lgs){
-    --columns-container-central: 1fr 35%;
     --columns-tienda-products: repeat(3, 1fr);
   }
 }
@@ -65,7 +68,6 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   // gap de los container
   --gap-aside: .5rem;
   --gap-container-grid: .5rem;
-  --gap-container-central: 1rem;
   --gap-card-copy: .25rem;
   @include mq(lgs){
     --gap-container-grid: 1rem;
@@ -74,7 +76,7 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
 
 :root{
   //margenes y lineas (before o after)
-  --margen-header: 1rem;
+  --margen-header: 1.5rem;
   --linea-header: 0;
   --lineas-footer-widgets: 0;
   --lineas-titulo-tienda: 0;

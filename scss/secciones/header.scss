@@ -11,10 +11,10 @@
     content: "";
     position: absolute;
     background: white;
-    width: 80%;
+    width: 90%;
     height: var(--linea-header);
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
     bottom: 0;
   }
 }
@@ -140,7 +140,7 @@
   // border: 2px solid red;
   width: 100%;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   & #woocommerce_product_search-3{
     width: 95%;
     margin: auto;
@@ -183,7 +183,7 @@
 
 
 .Under-header-active{
-  margin-top: 7rem;
+  margin-top: 8rem;
 }
 
 .Content{

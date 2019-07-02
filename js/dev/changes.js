@@ -20,12 +20,9 @@ const eliminaTitle = () =>{
     t.classList.remove('ocultar')
     t.classList.add('mostrar')
   }else if(pageActual != "/PaltolimWC/tienda/"){
-    console.log('entro')
     t.classList.remove('mostrar')
     t.classList.add('ocultar')
   }
-  console.log(pageActual)
-  console.log(t)
 }
 
 export {headerAnimado, OnLoad}

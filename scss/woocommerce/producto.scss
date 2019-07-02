@@ -1,0 +1,87 @@
+// Para la plantilla que muestra cada uno de los productos
+
+div.woocommerce-product-gallery{
+  border: 2px solid red;
+}
+.summary.entry-summary{ //Tarjeta de producto
+  border: 2px solid blue;
+  & h1.product_title{
+    @include titulo(color(everglade));
+    text-align: center;
+  }
+  & p.price{
+    padding: .5rem 0;
+    & span{
+      color: black;
+    }
+  }
+  & .woocommerce-product-details__short-description{
+    margin-bottom: 1rem;
+  }
+  & form.variations_form.cart{
+    // background-color: green;
+    & table.variations{
+      & tbody{
+        margin: 0;
+      }
+      & tr{
+        display: flex;
+        width: 100%;
+        // border: 2px solid red;
+        justify-content: space-between;
+        height: auto !important;
+        & td.label{
+          padding-right: .5rem;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          color: color(shark);
+        }
+        & td.value{
+          display: flex;
+          // border: 2px solid blue;
+          width: 90%;
+          height: 2.5rem;
+          & select{
+            border: 1px solid color(secondary);
+            outline: none;
+            background-color: white;
+            margin-right: 0;
+            border-radius: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+a.reset_variations{
+  color: color(alert);
+  padding: 0 .5rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  &:hover{
+    color: darken(color(alert),5);
+  }
+}
+
+section.related.products{
+  border: 2px solid green;
+  & ul.products.columns-4{
+    display: grid;
+    grid-template-columns: var(--columns-related-products);
+    &::before{
+      display: none;
+    }
+    & > li{
+      width: 100%;
+      background-color: red;
+      & a.button.add_to_cart_button{
+        display: block;
+        width: 80%;
+        margin: auto;
+        background-color: color(success);
+        color: white;
+      }
+    }
+  }
+}

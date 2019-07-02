@@ -6,6 +6,7 @@
   font-size:var(--font-size-titulo);
   padding: var(--padding-titulo);
   letter-spacing: $espacio-entre-letras;
+  font-family: $fuente-secundaria;
 }
 
 @mixin sub-titulo($font-color){

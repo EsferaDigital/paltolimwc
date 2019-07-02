@@ -10,6 +10,14 @@
 @import "config/breakpoints";
 @import "config/var-root";
 
+// Textos
+
+@import "textos/titulos";
+
+//Elementos
+
+@import "elementos/botones";
+
 // secciones (etiquetas html principales)
 
 @import "secciones/header";
@@ -20,7 +28,7 @@
 // contenedores (contenedores principales)
 
 @import "contenedores/header-container";
-// @import "contenedores/main-container";
+@import "contenedores/main-container";
 @import "contenedores/aside-container";
 @import "contenedores/footer-container";
 @import "contenedores/container-central";
@@ -32,6 +40,7 @@
 @import "woocommerce/tienda";
 @import "woocommerce/carrito";
 @import "woocommerce/formulario-busqueda";
+@import "woocommerce/producto";
 
 // Boxes (contenido único)
 
