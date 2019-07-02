@@ -114,6 +114,10 @@ if(!function_exists('paltolim_setup')):
   function paltolim_setup() {
     // soporte para woocommerce
     add_theme_support( 'woocommerce' );
+    //soporte para ligthbox y zoom de productos
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
     // soporte a imagen destacada
     add_theme_support('post-thumbnails');
 
@@ -151,7 +155,84 @@ if(!function_exists('paltolim_setup')):
 endif;
 add_action('after_setup_theme', 'paltolim_setup');
 
-//Hooks woocommerce
+//Hooks y filtros woocommerce
+
+// Establece el valor de inicio, el valor máximo, el valor mínimo y la cantidad de incremento.
+
+add_filter( 'woocommerce_quantity_input_args', 'paltolim_woocommerce_quantity_input_args', 10, 2 );
+
+function paltolim_woocommerce_quantity_input_args( $args, $product ){
+  if ( is_singular( 'product' ) ){
+    $args['input_value'] 	= 50;
+  }
+  $args['max_value'] = 1000;
+  $args['min_value'] = 50;
+  $args['step'] = 50;
+  return $args;
+}
+
+add_filter( 'woocommerce_available_variation', 'paltolim_woocommerce_available_variation' );
+
+function paltolim_woocommerce_available_variation( $args ){
+  $args['max_qty'] = 1000; 		// Maximum value (variations)
+	$args['min_qty'] = 50;   	// Minimum value (variations)
+	return $args;
+}
+// mejoramos botones para aumentar o disminuir productos pedidos
+add_action( 'woocommerce_before_add_to_cart_quantity', 'paltolim_display_quantity_plus' );
+
+function paltolim_display_quantity_plus() {
+	echo '<button type="button" class="plus" >+</button>';
+}
+
+add_action( 'woocommerce_after_add_to_cart_quantity', 'paltolim_display_quantity_minus' );
+
+function paltolim_display_quantity_minus() {
+	echo '<button type="button" class="minus" >-</button>';
+}
+
+add_action( 'wp_footer', 'paltolim_add_cart_quantity_plus_minus' );
+
+function paltolim_add_cart_quantity_plus_minus() {
+	// Only run this on the single product page
+	if ( ! is_product() ) return;
+	?>
+		<script type="text/javascript">
+
+		jQuery(document).ready(function($){
+
+			$('form.cart').on( 'click', 'button.plus, button.minus', function() {
+
+				// Get current quantity values
+				var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
+				var val	= parseFloat(qty.val());
+				var max = parseFloat(qty.attr( 'max' ));
+				var min = parseFloat(qty.attr( 'min' ));
+				var step = parseFloat(qty.attr( 'step' ));
+
+				// Change the value if plus or minus
+				if ( $( this ).is( '.plus' ) ) {
+					if ( max && ( max <= val ) ) {
+						qty.val( max );
+					} else {
+						qty.val( val + step );
+					}
+				} else {
+					if ( min && ( min >= val ) ) {
+						qty.val( min );
+					} else if ( val > 1 ) {
+						qty.val( val - step );
+					}
+				}
+
+			});
+
+		});
+
+		</script>
+	<?php
+}
+
 
 // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 

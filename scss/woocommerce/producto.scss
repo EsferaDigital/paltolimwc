@@ -1,7 +1,14 @@
 // Para la plantilla que muestra cada uno de los productos
 
+.product.type-product{
+  width: 100%;
+}
+
+
 div.woocommerce-product-gallery{
   border: 2px solid red;
+  width: 90% !important;
+  margin: auto;
 }
 .summary.entry-summary{ //Tarjeta de producto
   border: 2px solid blue;
@@ -51,6 +58,20 @@ div.woocommerce-product-gallery{
         }
       }
     }
+    & .single_variation_wrap{
+      & .woocommerce-variation-add-to-cart.variations_button{
+        & .quantity{
+          & input.input-text.qty{
+            border: 1px solid color(secondary);
+            border-radius: 7px;
+            line-height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  & span{
+    color: red;
   }
 }
 
@@ -84,4 +105,11 @@ section.related.products{
       }
     }
   }
+}
+
+// Caja que debemos maquetar para que se vean bien los botones y los input
+.woocommerce-variation-add-to-cart.variations_button{
+  border: 3px solid green;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
