@@ -54,13 +54,16 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
     --rows-card-copy: none;
     --columns-footer-widgets: repeat(3, 1fr);
     --columns-tienda-products: 1fr 1fr;
+    --columns-related-products: 1fr 1fr;
   }
   @include mq(mdl){
     --columns-container-central: 1fr minmax(min-content, max-content);
     --columns-tienda-products: repeat(2, 1fr);
+    --columns-related-products: 1fr 1fr 1fr;
   }
   @include mq(lgs){
     --columns-tienda-products: repeat(3, 1fr);
+    --columns-related-products: repeat(4, 1fr);
   }
 }
 

@@ -1,17 +1,17 @@
 // Para la plantilla que muestra cada uno de los productos
 
-.product.type-product{
-  width: 100%;
-}
-
-
-div.woocommerce-product-gallery{
-  border: 2px solid red;
-  width: 90% !important;
+.product.type-product{ //contenedor
+  width: 95%;
   margin: auto;
+  // border: 2px solid red;
 }
+
+
+// div.woocommerce-product-gallery{ //imagen del producto
+//   // border: 2px solid red;
+// }
 .summary.entry-summary{ //Tarjeta de producto
-  border: 2px solid blue;
+  // border: 2px solid blue;
   & h1.product_title{
     @include titulo(color(everglade));
     text-align: center;
@@ -19,7 +19,7 @@ div.woocommerce-product-gallery{
   & p.price{
     padding: .5rem 0;
     & span{
-      color: black;
+      color: color(shark);
     }
   }
   & .woocommerce-product-details__short-description{
@@ -60,18 +60,162 @@ div.woocommerce-product-gallery{
     }
     & .single_variation_wrap{
       & .woocommerce-variation-add-to-cart.variations_button{
+        display: grid;
+        grid-template-columns: repeat(minmax(min-content, max-content), 5);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: " . minus caja plus . "
+                             "boton boton boton boton boton";
+        grid-gap: 1rem .5rem;
+        @include mq(lgs){
+          grid-template-areas: "minus caja plus . boton";
+          grid-template-rows: 1fr;
+          grid-gap: 0;
+        }
+        & div:first-child{
+          display: none;
+        }
+        & > div{
+          height: 2.4rem;
+        }
         & .quantity{
+          margin: 0 4px;
+          grid-area: caja;
           & input.input-text.qty{
             border: 1px solid color(secondary);
-            border-radius: 7px;
-            line-height: 1.5rem;
+            width: 100%;
+            height: 100%;
+            line-height: 100%;
           }
+        }
+        & button.minus, button.plus{
+          background-color: color(amulet);
+          border: none;
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 800;
+          outline: none;
+          &:hover{
+            background-color: darken(color(amulet),8);
+          }
+          &:active{
+            transform: scale(.95);
+          }
+        }
+        & button.minus{
+          grid-area: minus;
+        }
+        & button.plus{
+          grid-area: plus;
+        }
+        & button.single_add_to_cart_button{
+          grid-area: boton;
+          background-color: color(success);
+          margin: 0 2rem;
         }
       }
     }
   }
-  & span{
-    color: red;
+  & .product_meta{
+    display: grid;
+    grid-template-columns: 1fr;
+    & span.sku_wrapper{
+      color: color(everglade);
+      & .sku{
+        color: color(secondary);
+      }
+    }
+    & span.posted_in{
+      color: color(everglade);
+      & a{
+        color: color(success);
+      }
+    }
+    & span.tagged_as{
+      color: color(everglade);
+      & a{
+        color: color(success);
+      }
+    }
+  }
+}
+
+.woocommerce-tabs.wc-tabs-wrapper{ //descripcion producto
+  & ul.tabs.wc-tabs li.description_tab{
+    & a{
+      color: color(amulet);
+    }
+  }
+  & ul.tabs.wc-tabs li.description_tab.active{
+    & a{
+      color: color(everglade);
+    }
+  }
+  & ul.tabs.wc-tabs li.additional_information_tab{
+    & a{
+      color: color(amulet);
+    }
+  }
+  & ul.tabs.wc-tabs li.additional_information_tab.active{
+    & a{
+      color: color(everglade);
+    }
+  }
+  & .woocommerce-Tabs-panel.woocommerce-Tabs-panel--description.panel.entry-content.wc-tab{
+    // border: 1px solid red;
+    & h2{
+      @include sub-titulo(color(everglade));
+      padding: .5rem 0;
+    }
+    & p{
+      @include parrafo(color(shark));
+    }
+  }
+  & .woocommerce-Tabs-panel.woocommerce-Tabs-panel--additional_information.panel.entry-content.wc-tab{
+    // border: 2px solid red;
+    & h2{
+      @include sub-titulo(color(everglade));
+      padding: .5rem 0;
+    }
+    & table.woocommerce-product-attributes.shop_attributes{
+      // border: 2px solid green;
+      & th, td{
+        color: color(shark);
+      }
+    }
+  }
+}
+
+section.related.products{ //productos relacionados
+  & h2{
+    @include sub-titulo(color(everglade));
+    padding: .5rem 0;
+  }
+  & ul.products.columns-4{
+    display: grid;
+    grid-template-columns: var(--columns-related-products);
+    grid-gap: 1rem;
+    &::before{
+      display: none;
+    }
+    & > li{
+      width: 100%;
+      background-color: color(bg);
+      padding-bottom: 1rem;
+      & a.button.add_to_cart_button{
+        display: block;
+        width: 80%;
+        margin: auto;
+        background-color: color(success);
+        color: white;
+      }
+    }
+    & li a span.price{
+      // border: 2px solid red;
+      text-align: center;
+      & > span{
+        color: color(shark);
+      }
+    }
   }
 }
 
@@ -83,33 +227,4 @@ a.reset_variations{
   &:hover{
     color: darken(color(alert),5);
   }
-}
-
-section.related.products{
-  border: 2px solid green;
-  & ul.products.columns-4{
-    display: grid;
-    grid-template-columns: var(--columns-related-products);
-    &::before{
-      display: none;
-    }
-    & > li{
-      width: 100%;
-      background-color: red;
-      & a.button.add_to_cart_button{
-        display: block;
-        width: 80%;
-        margin: auto;
-        background-color: color(success);
-        color: white;
-      }
-    }
-  }
-}
-
-// Caja que debemos maquetar para que se vean bien los botones y los input
-.woocommerce-variation-add-to-cart.variations_button{
-  border: 3px solid green;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
 }

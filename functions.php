@@ -179,13 +179,13 @@ function paltolim_woocommerce_available_variation( $args ){
 	return $args;
 }
 // mejoramos botones para aumentar o disminuir productos pedidos
-add_action( 'woocommerce_before_add_to_cart_quantity', 'paltolim_display_quantity_plus' );
+add_action( 'woocommerce_after_add_to_cart_quantity', 'paltolim_display_quantity_plus' );
 
 function paltolim_display_quantity_plus() {
 	echo '<button type="button" class="plus" >+</button>';
 }
 
-add_action( 'woocommerce_after_add_to_cart_quantity', 'paltolim_display_quantity_minus' );
+add_action( 'woocommerce_before_add_to_cart_quantity', 'paltolim_display_quantity_minus' );
 
 function paltolim_display_quantity_minus() {
 	echo '<button type="button" class="minus" >-</button>';

@@ -5,6 +5,10 @@
   background-color: $bg-color;
 }
 
+@mixin parrafo($color){
+  font-size: var(--font-size-parrafos);
+}
+
 
 
 .Parrafo{

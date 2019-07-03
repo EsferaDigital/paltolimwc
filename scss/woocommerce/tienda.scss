@@ -6,16 +6,16 @@
 }
 
 .site-main{
-  // padding: 0 1rem;
+  padding: 0 1rem;
   max-width: 100%;
   // background-color: color(fondo);
   & nav.woocommerce-breadcrumb{
     // border: 2px solid red; //menu migas
     padding: .5rem 0;
   }
-  & header.woocommerce-products-header{ //titulo
-    // border: 2px solid yellow;
-  }
+  // & header.woocommerce-products-header{ //titulo
+  //   // border: 2px solid yellow;
+  // }
   & p.woocommerce-result-count{
     color: color(shark);
     margin: .5rem auto;
@@ -58,7 +58,7 @@
   font-size: var(--font-size-titulo-tienda);
   &:before{
     content: "";
-    width: 30%;
+    width: 37%;
     height: var(--lineas-titulo-tienda);
     position: absolute;
     top: 50%;
@@ -67,7 +67,7 @@
   }
   &:after{
     content: "";
-    width: 30%;
+    width: 37%;
     height: var(--lineas-titulo-tienda);
     position: absolute;
     top: 50%;
