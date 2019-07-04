@@ -15,6 +15,9 @@
   & h1.product_title{
     @include titulo(color(everglade));
     text-align: center;
+    @include mq(lgs){
+      text-align: start;
+    }
   }
   & p.price{
     padding: .5rem 0;
@@ -59,6 +62,32 @@
       }
     }
     & .single_variation_wrap{
+      & .woocommerce-variation.single_variation{
+        background-color: color(everglade);
+        margin-right: 2rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        & .woocommerce-variation-description p{
+          font-size: 1.3rem;
+          color: white;
+          text-align: center;
+        }
+        & .woocommerce-variation-price{
+          text-align: center;
+          &:after{
+            content: " Por Kilo";
+            font-size: 1.5rem;
+            color: color(secondary);
+          }
+          & span.woocommerce-Price-amount.amount{
+            font-size: 1.5rem;
+          }
+        }
+        & .woocommerce-variation-availability p{
+          text-align: center;
+          font-size: 1.1rem;
+        }
+      }
       & .woocommerce-variation-add-to-cart.variations_button{
         display: grid;
         grid-template-columns: repeat(minmax(min-content, max-content), 5);
