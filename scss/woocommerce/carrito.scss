@@ -83,6 +83,171 @@
 
 //Pagina del carrito
 
+body.woocommerce-cart{
+  & .Under-header{
+    display: none;
+  }
+  & .Content{
+    // border: 2px solid green;
+    margin-top: 7rem;
+    & form.woocommerce-cart-form{ // Tabla Formulario
+      & table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents{
+        border: 1px solid color(primary);
+        & thead > tr{
+          background-color: color(primary);
+          & > th{
+            color: color(secondary);
+            font-size: 1.2rem;
+          }
+        }
+        & tbody > tr{
+          & td.product-remove > a.remove{
+            color: color(alert) !important;
+            transition: all .3s;
+            &:hover{
+              color: white !important;
+              background-color: color(alert);
+            }
+          }
+          & td.product-thumbnail{ //imagen miniatura del producto
+            width: 5rem;
+            & > a{
+              width: 100%;
+              & img{
+                width: 100%;
+              }
+            }
+          }
+          & td.product-name > a{ // Nombre del producto
+            color: color(shark);
+            &:hover{
+              color: color(primary);
+            }
+          }
+          & td.product-price > span{
+            color: color(primary);
+            font-size: 1rem;
+          }
+          & td.product-quantity > .quantity{
+            & input{
+              min-width: 5rem;
+              border: 1px solid color(secondary);
+              border-radius: 10px;
+              outline: none;
+            }
+          }
+          & td.product-subtotal{
+            background-color: color(tobaco);
+            text-align: center;
+            & > span{
+              color: white;
+              font-size: 1.1rem;
+              font-weight: 700;
+            }
+          }
+          & td.actions{
+            // border: 1px solid red;
+            & .coupon{
+              // border: 2px solid blue;
+              display: flex;
+              width: 40%;
+              & input.input-text{
+                width: 50%;
+                line-height: 1.5rem;
+                border: 1px solid color(everglade);
+              }
+              & button{
+                @include btn-wc;
+              }
+            }
+            & button{
+              @include btn-wc;
+            }
+          }
+        }
+      }
+    }
+    & .cart-collaterals{ //Finalizar compra
+      border: 1px solid color(tobaco);
+      border-radius: 7px;
+      padding: 1rem;
+      & .cart_totals{
+        // border: 1px solid transparent;
+        border-radius: 7px;
+        overflow: hidden;
+        & h2{
+          color: color(secondary);
+          background-color: color(primary);
+          padding: 1rem .5rem;
+          font-size: var(--font-size-aside-subtitle);
+        }
+        & table.shop_table.shop_table_responsive{
+          border-radius: 0 0 7px 7px;
+          & tbody > tr{
+            & > th{
+              color: color(everglade);
+            }
+            & td > span{
+              color: color(primary);
+              font-size: 1rem;
+            }
+            & td[data-title="Envío"]{
+              & form.woocommerce-shipping-calculator{
+                & a.shipping-calculator-button{
+                  color: color(everglade);
+                  transition: color .3s;
+                  &:hover{
+                    color: darken(color(secondary), 5);
+                  }
+                  &:after{
+                    color: color(secondary);
+                  }
+                }
+                & section.shipping-calculator-form{
+                  & p.form-row.form-row-wide {
+                    & span.select2.select2-container.select2-container--default > span.selection > span{
+                      border: 1px solid color(secondary);
+                      border-radius: 7px;
+                    }
+                    & > input{
+                      border: 1px solid color(secondary);
+                      border-radius: 7px;
+                    }
+                  }
+                  & p > button.button{
+                    @include btn-wc;
+                  }
+                }
+              }
+              & ul.woocommerce-shipping-methods > li > label{
+                color: color(shark);
+                & span{
+                  color: color(everglade);
+                }
+              }
+            }
+            & td[data-title="Total"]{
+              & strong > span{
+                color: color(tobaco);
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+        & .wc-proceed-to-checkout{
+          & a.checkout-button.button.alt.wc-forward{
+            @include btn-wc;
+            background-color: color(cta);
+            &:hover{
+              background-color: darken(color(cta),5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .woocommerce{
   & p.cart-empty{
     color: color(shark);

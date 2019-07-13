@@ -6,6 +6,15 @@
   // border: 2px solid red;
 }
 
+.woocommerce-notices-wrapper{
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1rem;
+  & .woocommerce-message > a{
+    @include btn-wc;
+  }
+}
+
 
 // div.woocommerce-product-gallery{ //imagen del producto
 //   // border: 2px solid red;
@@ -74,13 +83,12 @@
         }
         & .woocommerce-variation-price{
           text-align: center;
-          &:after{
-            content: " Por Kilo";
-            font-size: 1.5rem;
-            color: color(secondary);
-          }
           & span.woocommerce-Price-amount.amount{
             font-size: 1.5rem;
+          }
+          & span.woocommerce-Price-currencySymbol.amount.mcmp-general-price-suffix{
+            // border: 2px solid red;
+            color: color(secondary);
           }
         }
         & .woocommerce-variation-availability p{

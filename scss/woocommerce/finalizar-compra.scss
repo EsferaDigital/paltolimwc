@@ -1,0 +1,66 @@
+body.woocommerce-checkout .Content{
+  border: 1px solid color(secondary);
+  border-radius: 7px;
+}
+
+.woocommerce-form-coupon-toggle{
+  & .woocommerce-info{
+    color: color(primary);
+    border: none;
+    background-color: color(secondary);
+    &:before{
+      color: color(primary);
+    }
+    & a.showcoupon{
+      color: color(shark);
+      transition: color .3s;
+      &:hover{
+        color: color(everglade);
+      }
+    }
+  }
+}
+
+.woocommerce-error{
+  background-color: color(alert);
+  &:before{
+    color: white;
+  }
+  & li{
+    color: white;
+  }
+}
+
+form.checkout_coupon.woocommerce-form-coupon{
+  & p{
+    color: color(shark);
+    padding: .5rem 0;
+  }
+  & p.form-row.form-row-first > input{
+    border: 1px solid color(secondary);
+    border-radius: 7px;
+  }
+  & p.form-row.form-row-last > button{
+    @include btn-wc;
+  }
+}
+
+form.checkout.woocommerce-checkout{
+  background-color: white;
+  padding: 1rem;
+  & > .col2-set > .col-1{
+    & .woocommerce-billing-fields h3{
+      color: color(primary);
+    }
+    & .woocommerce-billing-fields__field-wrapper{
+      border: 1px solid red;
+      margin-bottom: 1rem;
+      & p.form-row{
+        border: 1px solid blue;
+        & > label{
+          color: color(shark);
+        }
+      }
+    }
+  }
+}
