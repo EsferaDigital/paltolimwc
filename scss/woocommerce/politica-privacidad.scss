@@ -1,0 +1,32 @@
+body.privacy-policy{
+  & .Under-header{
+    display: none;
+  }
+  & .Container-central{
+    margin-top: 7rem;
+    grid-gap: 0;
+  }
+  & .Content{
+    border: 1px solid color(secondary);
+    background-color: color(primary);
+    border-radius: 7px;
+    padding: 1rem;
+    & p{
+      margin: 1rem auto;
+      color: white;
+      & a{
+        color: color(bg);
+        &:hover{
+          color: color(tacha);
+        }
+      }
+    }
+    & h2{
+      color: color(secondary);
+    }
+    & h3{
+      margin: 1rem auto;
+      color: color(tacha);
+    }
+  }
+}

@@ -1,6 +1,12 @@
-body.woocommerce-order-received .Content{
-  border: 1px solid white;
+body.woocommerce-order-received{
+  & .Content{
+    border: 1px solid white;
+  }
+  & .Container-central{
+    margin-top: 5rem;
+  }
 }
+
 
 .woocommerce-order{
   border: 1px solid color(tobaco);
@@ -11,8 +17,16 @@ body.woocommerce-order-received .Content{
   border-radius: 7px;
   max-width: 800px;
   margin: auto;
+  & > p{
+    padding: 1rem .5rem;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+    background-color: color(primary);
+    border-radius: 7px;
+  }
   & p.woocommerce-thankyou-order-received{
-    padding: 1rem 0;
+    padding: 1rem .5rem;
     font-size: 1.3rem;
     color: white;
     text-align: center;
@@ -32,6 +46,28 @@ body.woocommerce-order-received .Content{
       & span{
         color: color(tobaco);
         font-size: 1rem;
+      }
+    }
+  }
+  & section.woocommerce-bacs-bank-details{
+    // border: 1px solid red;
+    padding: 1rem 0;
+    & h2{
+      color: white;
+    }
+    & h3{
+      padding: .5rem 0;
+      color: color(primary);
+    }
+    & ul.wc-bacs-bank-details{
+      margin-bottom: 0;
+      & li{
+        font-size: 1rem;
+        color: color(primary);
+        & strong{
+          color: color(tobaco);
+          padding: 5px 0;
+        }
       }
     }
   }
