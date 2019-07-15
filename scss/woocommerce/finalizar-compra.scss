@@ -48,17 +48,112 @@ form.checkout_coupon.woocommerce-form-coupon{
 form.checkout.woocommerce-checkout{
   background-color: white;
   padding: 1rem;
-  & > .col2-set > .col-1{
-    & .woocommerce-billing-fields h3{
-      color: color(primary);
+  & h3{
+    color: color(primary);
+    padding: .5rem 0;
+  }
+  & > .col2-set{
+    & > .col-1{
+      & .woocommerce-billing-fields h3{
+        color: color(primary);
+      }
+      & .woocommerce-billing-fields__field-wrapper{
+        // border: 1px solid red;
+        margin-bottom: 1rem;
+        & p.form-row{
+          // border: 1px solid blue;
+          & > label{
+            color: color(shark);
+          }
+          & span.woocommerce-input-wrapper > input{
+            border: 1px solid color(secondary);
+            border-radius: 7px;
+          }
+        }
+      }
     }
-    & .woocommerce-billing-fields__field-wrapper{
-      border: 1px solid red;
-      margin-bottom: 1rem;
-      & p.form-row{
-        border: 1px solid blue;
-        & > label{
-          color: color(shark);
+    & > .col-2{
+      & .woocommerce-shipping-fields{
+        padding: 1rem;
+        border: 1px solid color(everglade);
+        border-radius: 7px;
+        margin-top: 1rem;
+        & h3{
+          color: color(primary);
+          padding: .5rem 0;
+        }
+        & .shipping_address{
+          & .woocommerce-shipping-fields__field-wrapper{
+            & p.form-row{
+              & > label{
+                color: color(shark);
+              }
+              & span.woocommerce-input-wrapper input{
+                border: 1px solid color(secondary);
+                border-radius: 7px;
+              }
+            }
+          }
+        }
+      }
+      & .woocommerce-additional-fields{
+        margin-top: 1rem;
+        & .woocommerce-additional-fields__field-wrapper{
+          & p.form-row > span.woocommerce-input-wrapper{
+            & textarea{
+              border: 1px solid color(secondary);
+              border-radius: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .woocommerce-checkout-review-order{
+    & table.shop_table.woocommerce-checkout-review-order-table{
+      & thead{
+        background-color: color(primary);
+        & tr > th{
+          color: color(secondary);
+        }
+      }
+      & tbody > tr > td.product-total{
+        // border: 1px solid red;
+        & span{
+          color: color(everglade);
+        }
+      }
+      & tfoot > tr.cart-subtotal{
+        & th{
+          color: color(success);
+        }
+        & td span{
+          color: color(everglade);
+        }
+      }
+      & tfoot > tr.order-total{
+        & th{
+          color: color(tobaco);
+        }
+        & td{
+          background-color: color(tobaco);
+        }
+      }
+    }
+    & .woocommerce-checkout-payment{
+      background-color: color(amulet) !important;
+      border: 1px solid color(tobaco);
+      & .form-row.place-order{
+        & .woocommerce-terms-and-conditions-wrapper{
+          & a.woocommerce-privacy-policy-link{
+            color: color(shark);
+            &:hover{
+              color: color(secondary);
+            }
+          }
+        }
+        & button{
+          @include btn-wc;
         }
       }
     }

@@ -1,0 +1,129 @@
+body.woocommerce-order-received .Content{
+  border: 1px solid white;
+}
+
+.woocommerce-order{
+  border: 1px solid color(tobaco);
+  background-color: rgba(215, 192, 76, 0.8);
+  // background-color: color(success);
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 7px;
+  max-width: 800px;
+  margin: auto;
+  & p.woocommerce-thankyou-order-received{
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+    background-color: color(everglade);
+    border-radius: 7px;
+  }
+  & ul.woocommerce-thankyou-order-details{
+    margin-top: 1rem;
+    & li{
+      color: color(everglade2);
+      & strong{
+        color: color(tobaco);
+        padding-top: .5rem;
+      }
+    }
+    & li.woocommerce-order-overview__total > strong{
+      & span{
+        color: color(tobaco);
+        font-size: 1rem;
+      }
+    }
+  }
+  & section.woocommerce-order-details{
+    & h2{
+      color: white;
+      margin-bottom: .5rem;
+      text-align: center;
+    }
+    & table.woocommerce-table.woocommerce-table--order-details.shop_table.order_details{
+      overflow: hidden;
+      border-collapse: collapse;
+      & thead{
+        background-color: color(primary);
+        & tr > th{
+          color: white;
+          text-align: center;
+        }
+        & tr > th:first-child{
+          text-align: start;
+        }
+      }
+      & tbody, tfoot{
+        background-color: color(bg);
+      }
+      & tbody > tr.woocommerce-table__line-item.order_item {
+        & > td.woocommerce-table__product-name.product-name{
+          & a{
+            color: color(shark);
+            transition: color .3s;
+            &:hover{
+              color: color(secondary);
+            }
+          }
+          & strong{
+            color: color(shark);
+          }
+        }
+        & > td.woocommerce-table__product-total.product-total{
+          text-align: center;
+          & span{
+            color: color(shark);
+          }
+        }
+      }
+      & tfoot > tr{
+        & th{
+          color: color(shark);
+        }
+        & td{
+          text-align: center;
+        }
+        & td span{
+          color: color(tobaco);
+        }
+      }
+      & tfoot tr:last-child{
+        & td{
+          background-color: color(everglade);
+          & span{
+            color: white;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  & section.woocommerce-customer-details{
+    & section.woocommerce-columns.woocommerce-columns--2.woocommerce-columns--addresses.col2-set.addresses{
+      border: 1px solid color(primary);
+      border-radius: 7px;
+      padding: 1rem;
+      & .woocommerce-column{
+        & h2{
+          color: color(primary);
+          font-size: var(--font-size-aside-subtitle);
+          padding: .5rem 0;
+          padding-top: 0;
+        }
+        & address{
+          border: none;
+          padding: 0;
+          font-size: var(--font-size-parrafos);
+          color: color(shark);
+          & p{
+            line-height: 1.5rem;
+            &:before{
+              color: color(primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
