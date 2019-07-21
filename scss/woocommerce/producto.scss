@@ -1,5 +1,14 @@
 // Para la plantilla que muestra cada uno de los productos
 
+body.single-product {
+  & .Under-header{
+    display: none;
+  }
+  & .Container-central{
+    margin-top: 7rem;
+  }
+}
+
 .product.type-product{ //contenedor
   width: 95%;
   margin: auto;

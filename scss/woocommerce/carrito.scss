@@ -93,6 +93,7 @@ body.woocommerce-cart{
     & form.woocommerce-cart-form{ // Tabla Formulario
       & table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents{
         border: 1px solid color(primary);
+        box-shadow: $shadow-flat;
         & thead > tr{
           background-color: color(primary);
           & > th{
@@ -150,7 +151,11 @@ body.woocommerce-cart{
             & .coupon{
               // border: 2px solid blue;
               display: flex;
-              width: 40%;
+              width: 100%;
+              @include mq(md){
+                width: 60%;
+                max-width: 500px;
+              }
               & input.input-text{
                 width: 50%;
                 line-height: 1.5rem;
@@ -171,6 +176,7 @@ body.woocommerce-cart{
       border: 1px solid color(tobaco);
       border-radius: 7px;
       padding: 1rem;
+      box-shadow: $shadow-flat;
       & .cart_totals{
         // border: 1px solid transparent;
         border-radius: 7px;

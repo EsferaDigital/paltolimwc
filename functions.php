@@ -157,6 +157,30 @@ add_action('after_setup_theme', 'paltolim_setup');
 
 //Hooks y filtros woocommerce
 
+add_filter( 'woocommerce_checkout_fields' , 'paltolim_override_checkout_fields' );
+
+function paltolim_override_checkout_fields( $fields ) {
+  // unset($fields['billing']['billing_first_name']);
+  unset($fields['billing']['billing_last_name']);
+  unset($fields['billing']['billing_company']);
+  unset($fields['billing']['billing_address_1']);
+  unset($fields['billing']['billing_address_2']);
+  unset($fields['billing']['billing_city']);
+  unset($fields['billing']['billing_postcode']);
+  unset($fields['billing']['billing_country']);
+  unset($fields['billing']['billing_state']);
+  unset($fields['billing']['billing_phone']);
+  unset($fields['order']['order_comments']);
+  unset($fields['billing']['billing_address_2']);
+  unset($fields['billing']['billing_postcode']);
+  unset($fields['billing']['billing_company']);
+  unset($fields['billing']['billing_last_name']);
+  // unset($fields['billing']['billing_email']);
+  unset($fields['billing']['billing_city']);
+  unset( $tabs['additional_information'] );
+  return $fields;
+}
+
 // Establece el valor de inicio, el valor máximo, el valor mínimo y la cantidad de incremento.
 
 add_filter( 'woocommerce_quantity_input_args', 'paltolim_woocommerce_quantity_input_args', 10, 2 );
@@ -232,6 +256,9 @@ function paltolim_add_cart_quantity_plus_minus() {
 		</script>
 	<?php
 }
+
+// Ocultar productos relacionados
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 
 // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);

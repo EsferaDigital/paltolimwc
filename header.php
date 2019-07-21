@@ -20,7 +20,7 @@
       if(is_home() || is_front_page()):?>
         <div class="Text-home-header">
           <h2>Transporte de palta hass del campo a la ciudad.</h2>
-          <h3>Sin intermediarios</h3>
+          <h3>Sin Intermediarios</h3>
           <small>Uniendo a los grandes productores con las pymes chilenas</small>
         </div>
       <?php else:
