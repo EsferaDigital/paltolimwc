@@ -80,12 +80,14 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
 :root{
   //margenes y lineas (before o after)
   --margen-header: 1.5rem;
+  --margen-content: 5rem;
   --linea-header: 0;
   --lineas-footer-widgets: 0;
   --lineas-titulo-tienda: 0;
   @include mq(mdl){
     --linea-header: 1px;
     --lineas-footer-widgets: 1px;
+    --margen-content: 6rem;
   }
   @include mq(lgs){
     --lineas-titulo-tienda: 1px;

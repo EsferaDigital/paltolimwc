@@ -81,6 +81,24 @@
   padding: .5rem 0 !important;
 }
 
+// Mini carrito flotante
+
+li.mini_cart_item{
+  // border: 1px solid red !important;
+  & span.woocommerce-Price-amount.amount{
+    color: color(everglade);
+  }
+}
+
+#woo-floating-minicart-base{
+  & p.total > strong{
+    color: color(secondary);
+  }
+  & p.buttons{
+    // border: 2px solid red;
+    padding: 1rem 3px !important;
+  }
+}
 //Pagina del carrito
 
 body.woocommerce-cart{
@@ -89,7 +107,7 @@ body.woocommerce-cart{
   }
   & .Content{
     // border: 2px solid green;
-    margin-top: 7rem;
+    margin-top: var(--margen-content);
     & form.woocommerce-cart-form{ // Tabla Formulario
       & table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents{
         border: 1px solid color(primary);
@@ -119,15 +137,36 @@ body.woocommerce-cart{
               }
             }
           }
+          & td.product-name{
+            color: color(secondary);
+          }
           & td.product-name > a{ // Nombre del producto
             color: color(shark);
             &:hover{
               color: color(primary);
             }
           }
-          & td.product-price > span{
-            color: color(primary);
-            font-size: 1rem;
+          & td.product-price{
+            color: color(secondary);
+            & > span.woocommerce-Price-amount{
+              font-size: 1rem;
+              color: color(everglade);
+            }
+            & span.discount-info{
+              border: 1px solid color(success);
+              padding: .5rem;
+              & span.old-price > span.woocommerce-Price-amount.amount{
+                font-size: .9rem;
+                color: color(primary);
+              }
+              & span.new-price > span.woocommerce-Price-amount.amount{
+                font-size: 1rem;
+                color: color(everglade);
+              }
+            }
+          }
+          & td.product-quantity{
+            color: color(secondary);
           }
           & td.product-quantity > .quantity{
             & input{
@@ -140,7 +179,8 @@ body.woocommerce-cart{
           & td.product-subtotal{
             background-color: color(tobaco);
             text-align: center;
-            & > span{
+            color: color(secondary);
+            & span.woocommerce-Price-amount.amount{
               color: white;
               font-size: 1.1rem;
               font-weight: 700;
@@ -230,6 +270,9 @@ body.woocommerce-cart{
                 & span{
                   color: color(everglade);
                 }
+              }
+              & p.woocommerce-shipping-destination{
+                display: none; // Porque no tenemos despcho todavía
               }
             }
             & td[data-title="Total"]{

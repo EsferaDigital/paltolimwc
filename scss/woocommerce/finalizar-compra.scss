@@ -74,6 +74,7 @@ form.checkout.woocommerce-checkout{
     }
     & > .col-2{
       & .woocommerce-shipping-fields{
+        display: none; // para ocultar enviar a otra direccion
         padding: 1rem;
         border: 1px solid color(everglade);
         border-radius: 7px;

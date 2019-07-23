@@ -25,4 +25,5 @@ const eliminaTitle = () =>{
   }
 }
 
+
 export {headerAnimado, OnLoad}
