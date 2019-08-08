@@ -3,8 +3,8 @@
     <nav>
       <?php
       echo paginate_links(array(
-        'prev_text' => __('<span>&laquo; Anteriores</span>', 'starter'),
-        'next_text' => __('<span>Siguientes &raquo;</span>', 'starter')
+        'prev_text' => __('<span>&laquo; Anteriores</span>', 'paltolim'),
+        'next_text' => __('<span>Siguientes &raquo;</span>', 'paltolim')
       ));
       ?>
     </nav>

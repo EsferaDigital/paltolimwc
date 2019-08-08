@@ -29,7 +29,7 @@ if(!function_exists('paltolim_custom_header')):
     add_theme_support('custom-header', apply_filters('paltolim_custom_header_args', array(
       'default-image' => get_template_directory_uri() . '/img/header-img.jpg',
       'default-text-color' => '000',
-      'width' => 1200,
+      'width' => 1400,
       'height' => 224,
       'flex-width' => true,
       'flex-height' => true,

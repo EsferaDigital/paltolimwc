@@ -2,7 +2,7 @@ const headerAnimado = () =>{
   let header = document.getElementById('Header')
   let pageActual = window.location.pathname
 
-  if(pageActual != "/PaltolimWC/"){
+  if(pageActual != "/"){
     header.classList.add('Header-active')
   }else {
     header.classList.remove('Header-active')
@@ -16,10 +16,10 @@ const OnLoad = () =>{
 const eliminaTitle = () =>{
   const t = document.querySelector('#text-2 > h3')
   let pageActual = window.location.pathname
-  if(pageActual == "/PaltolimWC/tienda/"){
+  if(pageActual == "/tienda/"){
     t.classList.remove('ocultar')
     t.classList.add('mostrar')
-  }else if(pageActual != "/PaltolimWC/tienda/"){
+  }else if(pageActual != "/tienda/"){
     t.classList.remove('mostrar')
     t.classList.add('ocultar')
   }

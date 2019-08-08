@@ -110,7 +110,7 @@ ul.products.columns-3{
     transition: transform .2s;
     position: relative;
     border-radius: 10px;
-    // border: 1px solid color(everglade);
+    // border: 1px solid red;
     // padding: .5rem 0 0;
     overflow: hidden;
     &:hover{
@@ -126,7 +126,7 @@ ul.products.columns-3{
         color: color(shark);
       }
     }
-    & > a.button.product_type_variable.add_to_cart_button{
+    & > a.button{
       border: none;
       display: block;
       text-align: center;

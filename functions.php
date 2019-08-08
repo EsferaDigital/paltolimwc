@@ -112,12 +112,6 @@ add_action('widgets_init', 'paltolim_register_sidebars');
 // Añadimos soportes básicos
 if(!function_exists('paltolim_setup')):
   function paltolim_setup() {
-    // soporte para woocommerce
-    add_theme_support( 'woocommerce' );
-    //soporte para ligthbox y zoom de productos
-    add_theme_support( 'wc-product-gallery-zoom' );
-    add_theme_support( 'wc-product-gallery-lightbox' );
-    add_theme_support( 'wc-product-gallery-slider' );
     // soporte a imagen destacada
     add_theme_support('post-thumbnails');
 

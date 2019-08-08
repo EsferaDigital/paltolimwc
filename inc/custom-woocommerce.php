@@ -15,6 +15,12 @@ add_action('after_setup_theme', 'paltolim_setup_woocommerce');
 // Ocultar productos relacionados
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
+//Controlar número de columnas para mostrar productos en tienda
+add_filter('loop_shop_columns', 'paltolim_columns_product', 20);
+function paltolim_columns_product($columnas){
+  return 3;
+}
+
 // Ocultar titulo tienda (no el del menú)
 // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 
