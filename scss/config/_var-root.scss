@@ -123,6 +123,7 @@ $degradado-header: linear-gradient(to right, #0A1C20, #1B5441, #3D8659, #154B3E,
   @include mq(lgs){
     --font-size-final-compra: 1rem;
     --font-size-titulo-tienda: 1.7rem;
+    --font-size-product-span: 1.5rem;
   }
 }
 

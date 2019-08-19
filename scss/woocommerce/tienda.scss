@@ -19,6 +19,7 @@
   & p.woocommerce-result-count{
     color: color(shark);
     margin: .5rem auto;
+    display: none; //hasta que no esté traducido
   }
   & form.woocommerce-ordering{ //formulario orden predeterminado
     // border: 2px solid green;
@@ -122,12 +123,21 @@ ul.products.columns-3{
     }
     & > a > span.price{
       text-align: center;
+      position: relative;
+      &:before{
+        content: "Por Kilo";
+        position: absolute;
+        color: color(primary);
+        top: 0;
+        right: 0;
+        left: 10rem;
+      }
       & > span{
         color: color(shark);
       }
     }
     & > a.button{
-      border: none;
+      border-radius: 15px;
       display: block;
       text-align: center;
       width: 90%;

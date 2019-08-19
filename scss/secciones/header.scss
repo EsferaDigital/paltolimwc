@@ -193,8 +193,11 @@
     @include mq(md){
       grid-template-columns: 1fr 1fr;
     }
+    @include mq(lgs){
+      grid-template-columns: repeat(3, 1fr);
+    }
     @include mq(lgm){
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
     &::before{
       display: none;
