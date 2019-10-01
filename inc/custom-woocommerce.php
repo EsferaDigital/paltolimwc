@@ -69,6 +69,23 @@ function paltolim_columns_product($columnas){
 // }
 // add_filter('woocommerce_checkout_fields', 'paltolim_edit_required_fields', 9999);
 
+// Quitar opciones de menu de pagina mi cuenta
+
+function paltolim_mi_cuenta_woocommmerce(){
+  function quitar_tabs( $items ){
+    unset( $items['downloads']);
+    //unset( $items['orders']);
+    unset( $items['edit-address']);
+    //unset( $items['edit-account']);
+    //unset( $items['customer-logout']);
+    return $items;
+  }
+
+  add_filter( 'woocommerce_account_menu_items', 'quitar_tabs' );
+}
+
+add_action( 'after_setup_theme', 'paltolim_mi_cuenta_woocommmerce' );
+
 
 function paltolim_not_required($address_fields){
   $address_fields['country']['required'] = false;

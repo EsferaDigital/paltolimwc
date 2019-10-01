@@ -40,3 +40,7 @@ body.woocommerce-checkout > .Container-central{
   grid-gap: 0;
   margin-top: 7rem;
 }
+
+body.woocommerce-account > .Under-header{
+  display: none;
+}
