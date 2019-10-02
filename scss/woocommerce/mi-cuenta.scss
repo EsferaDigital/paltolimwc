@@ -73,10 +73,210 @@ body.woocommerce-account{
 }
 
 nav.woocommerce-MyAccount-navigation{
-  border: 2px solid red;
+  border: 1px solid color(secondary);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  & ul > li > a{
+    color: color(primary);
+    transition: color .3s;
+    &:hover{
+      color: color(everglade);
+    }
+  }
 }
 
 .woocommerce-MyAccount-content{
-  border: 2px solid blue;
+  border: 1px solid color(secondary);
+  padding: 1rem;
+  border-radius: 5px;
+  & p{
+    color: color(everglade);
+    padding: .5rem 0;
+    & a{
+      color: color(success);
+      transition: color .3s;
+      &:hover{
+        color: color(primary);
+      }
+    }
+    & mark{
+      background-color: transparent;
+      color: color(everglade);
+    }
+  }
+  & .u-columns.woocommerce-Addresses.col2-set.addresses{
+    // border: 2px solid red;
+    display: grid;
+    grid-template-columns: 1fr;
+    & .u-column1.col-1.woocommerce-Address{
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      & header h3{
+        color: color(primary);
+        margin-bottom: .5rem;
+      }
+      & header a{
+        color: color(success);
+        transition: color .3s;
+        &:hover{
+          color: color(everglade);
+        }
+      }
+    }
+    & .u-column2.col-2.woocommerce-Address{
+      display: block;
+      width: 100%;
+      & header h3{
+        color: color(primary);
+        margin-bottom: .5rem;
+      }
+      & header a{
+        color: color(success);
+        transition: color .3s;
+        &:hover{
+          color: color(everglade);
+        }
+      }
+    }
+  }
+  & form.woocommerce-EditAccountForm.edit-account{
+    & p input{
+      border-color: color(everglade);
+      border-radius: 5px;
+      padding: .5rem;
+    }
+    & fieldset{
+      background-color: color(satin);
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 5px;
+      border-color: transparent;
+      & legend{
+        background-color: inherit;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border-radius: 5px;
+      }
+    }
+    & p button{
+      float: right;
+      color: white;
+      background-color: color(success);
+      transition: background-color .3s;
+      outline: none;
+      &:hover{
+        background-color: darken(color(success),5);
+      }
+      &:active{
+        transform: scale(.95);
+      }
+    }
+  }
+  & table.account-orders-table{
+    background-color: color(primary);
+    & thead tr th span{
+      color: color(secondary);
+    }
+    & tbody tr {
+      & td a{
+        color: white;
+        // &:hover{
+        //   color: color(amulet);
+        //   font-size: 1.1rem;
+        // }
+      }
+      & td time{
+        color: white;
+        font-weight: 800;
+      }
+      & td.woocommerce-orders-table__cell-order-status{
+        background-color: color(success);
+        color: white;
+      }
+      & td span.woocommerce-Price-amount.amount{
+        color: white;
+        font-weight: 800;
+      }
+      & td.woocommerce-orders-table__cell-order-total{
+        color: white;
+      }
+      & td a.woocommerce-button.button.view{
+        color: white;
+        background-color: color(success);
+        transition: background-color .3s;
+        outline: none;
+        &:hover{
+          background-color: darken(color(success),5);
+        }
+        &:active{
+          transform: scale(.95);
+        }
+      }
+    }
+  }
+  & section.woocommerce-order-details{
+    margin-top: 1rem;
+    & h2{
+      margin-bottom: .5rem;
+    }
+    & table{
+      & thead tr th{
+        color: color(everglade);
+        font-size: 1.1rem;
+      }
+      & tbody tr{
+        & td{
+          color: color(primary);
+          & a{
+            color: color(success);
+            &:hover{
+              color: darken(color(success), 5);
+            }
+          }
+        }
+        & td span{
+          color: color(primary);
+          font-weight: 800;
+        }
+      }
+      & tfoot tr{
+        & th{
+          color: color(tobaco);
+        }
+        & td{
+          color: color(everglade);
+          & span{
+            color: color(fondo);
+          }
+        }
+      }
+    }
+  }
+  & section.woocommerce-customer-details h2{
+    margin-bottom: .5rem;
+  }
+}
+
+.woocommerce-message.woocommerce-message--info.woocommerce-Message.woocommerce-Message--info.woocommerce-info{
+  border-top-color: color(success);
+  color: color(primary);
+  &:before{
+    color: color(success);
+  }
+}
+
+a.woocommerce-Button.button{
+  background-color: color(success);
+  color: white;
+  transition: background-color .3s;
+  &:hover{
+    background-color: darken(color(success),5);
+    color: white;
+  }
+  &:active{
+    transform: scale(.95);
+  }
 }
 
