@@ -187,18 +187,19 @@
 }
 
 .Content{
-  & ul.products{
+  & .woocommerce ul.products{
     display: grid;
     grid-template-columns: 1fr;
+    // border: 1px solid red;
     @include mq(md){
       grid-template-columns: 1fr 1fr;
     }
     @include mq(lgs){
       grid-template-columns: repeat(3, 1fr);
     }
-    @include mq(lgm){
-      grid-template-columns: repeat(5, 1fr);
-    }
+    // @include mq(lgm){
+    //   grid-template-columns: repeat(5, 1fr);
+    // }
     &::before{
       display: none;
     }
@@ -258,7 +259,7 @@
         letter-spacing: 1px;
         // font-weight: 500;
         @include mq(lgm){
-          font-size: 1.2rem;
+          font-size: 1.7rem;
           padding-top: 30%;
         }
       }

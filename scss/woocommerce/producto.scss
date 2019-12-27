@@ -249,6 +249,11 @@ form.cart{
   }
 }
 
+button.plus.disabled, button.minus.disabled{
+  background-color: color(amulet) !important;
+  cursor: not-allowed;
+}
+
 
 .woocommerce-tabs.wc-tabs-wrapper{ //descripcion producto
   & ul.tabs.wc-tabs li.description_tab{

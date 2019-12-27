@@ -100,6 +100,7 @@ ul.products.columns-3{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+  // border: 2px solid blue;
   &::before{
     display: none;
   }

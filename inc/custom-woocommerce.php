@@ -99,11 +99,14 @@ add_filter('woocommerce_default_address_fields', 'paltolim_not_required');
 
 function paltolim_woocommerce_quantity_input_args( $args, $product ){
   if ( is_singular( 'product' ) ){
-    $args['input_value'] 	= 50;
+    $args['input_value'] 	= 5;
+    $args['min_value'] = 5;
+    $args['step'] = 5;
   }
+
   $args['max_value'] = 1000;
-  $args['min_value'] = 50;
-  $args['step'] = 50;
+
+
   return $args;
 }
 add_filter( 'woocommerce_quantity_input_args', 'paltolim_woocommerce_quantity_input_args', 10, 2 );
@@ -139,25 +142,54 @@ function paltolim_add_cart_quantity_plus_minus() {
       $('form.cart').on( 'click', 'button.plus, button.minus', function() {
 
         // Get current quantity values
-        var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
+        var qty = $( this ).closest( 'form.cart' ).find( '.qty' ); //elemento cliqueado
         var val	= parseFloat(qty.val());
         var max = parseFloat(qty.attr( 'max' ));
         var min = parseFloat(qty.attr( 'min' ));
         var step = parseFloat(qty.attr( 'step' ));
 
-        // Change the value if plus or minus
+
+        // console.log(val); // 5
+        // console.log(max); // 1000
+        // console.log(min); // 5
+        // console.log(step); // 5
+
+        // Cambia el numero de pedidos con botones + y -
         if ( $( this ).is( '.plus' ) ) {
-          if ( max && ( max <= val ) ) {
+          $('.minus').removeAttr('disabled')
+          $('.minus').removeClass('disabled')
+          if ( max && ( max > val ) && val === 5 ) {
             qty.val( max );
-          } else {
             qty.val( val + step );
+            step = 10;
+            console.log('entro');
+          }
+          else if(max && (max > val) && val === 10 ){
+            qty.val( val + (step + 5) );
+            console.log('entro2')
+          } else if (max && max === val){
+            $(".plus").attr('disabled','disabled');
+            $('.plus').addClass('disabled')
+            return
+          }else {
+            qty.val( val + (step + 5 ));
+            step = 10;
+            console.log('entro3');
           }
         } else {
+          $('.plus').removeAttr('disabled')
+          $('.plus').removeClass('disabled')
           if ( min && ( min >= val ) ) {
             qty.val( min );
-          } else if ( val > 1 ) {
-            qty.val( val - step );
+          } else if ( val > 10) {
+            qty.val( val - (step + 5));
+          } else if(val >= 5){
+            qty.val(val - step)
+            $('.minus').attr('disabled', 'disabled');
+            $('.minus').addClass('disabled')
           }
+
+
         }
 
       });
